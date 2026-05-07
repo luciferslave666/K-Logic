@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --retro-bg: #fbb6ce; /* Pastel Pink */
+  --retro-window: #ffffff;
+  --retro-border: #1a1a1a;
+  --retro-accent-pink: #f48fb1;
+  --retro-accent-purple: #c5cae9;
+  --retro-accent-blue: #b3e5fc;
+  --retro-accent-yellow: #fff9c4;
+  --shadow-hard: 3px 3px 0px 0px #1a1a1a;
+}
+
+body {
+  background-color: var(--retro-bg);
+  color: #1a1a1a;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.retro-window {
+  background-color: var(--retro-window);
+  border: 2px solid var(--retro-border);
+  box-shadow: var(--shadow-hard);
+  position: relative;
+}
+
+.retro-window-header {
+  height: 24px;
+  background-color: #fff;
+  border-bottom: 2px solid var(--retro-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-weight: bold;
+  font-family: var(--font-orbitron);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #1a1a1a;
+}
+
+.retro-button {
+  background-color: var(--retro-accent-purple);
+  color: #1a1a1a;
+  border: 2px solid var(--retro-border);
+  box-shadow: 2px 2px 0px 0px var(--retro-border);
+  padding: 8px 16px;
+  transition: all 0.1s;
+  font-family: var(--font-orbitron);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.retro-button:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.retro-button:active {
+  box-shadow: 0px 0px 0px 0px transparent;
+  transform: translate(2px, 2px);
+}
+
+.retro-input {
+  background-color: #fff;
+  color: #1a1a1a;
+  border: 2px solid var(--retro-border);
+  padding: 8px;
+  font-family: var(--font-orbitron);
+}
+
+.pixel-text {
+  font-family: var(--font-mono);
+  letter-spacing: -0.05em;
+}
+
+/* Glitter Effect */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s infinite ease-in-out;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--retro-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 2px solid var(--retro-border);
+  box-shadow: 2px 2px 0px 0px var(--retro-border);
+}
